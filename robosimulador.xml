@@ -1,0 +1,1182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="09/18/21||19:56:23" using="Simscape Multibody Link Version 5.2" from="SolidWorks 28.2.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="robosimulador" uid="robosimulador" version="259">
+<AssemblyFile name="robosimulador.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="Braço1-2" uid="Braço1-2" entityUid="Braço1*:*Valor predeterminado">
+<Transform>
+<Rotation>2.425837308805967e-14 -0.23669000100316781 0.9715852219054798 -1.6600609775707653e-13 0.9715852219054798 0.23669000100316781 -1 -1.6703078567752004e-13 -1.5722906644826042e-14</Rotation>
+<Translation>-0.083530386786954153 -0.020155679991754921 -0.011655115947049684</Translation>
+</Transform>
+</Instance>
+<Instance name="peça nova perna 1 - Copia-1" uid="peça nova perna 1 - Copia-1" entityUid="peça nova perna 1 - Copia*:*Default">
+<Transform>
+<Rotation>-0.24215113760256268 -0.012355122055064442 -0.9701598721431377 0.97022202794714552 0.0027502954370225608 -0.24220167704030782 0.0056606575513119643 -0.99991989020821748 0.011321224406980976</Rotation>
+<Translation>0.031149103047545451 0.010564047592766981 -0.31528720605389071</Translation>
+</Transform>
+</Instance>
+<Instance name="Braço1-1" uid="Braço1-1" entityUid="Braço1*:*Valor predeterminado">
+<Transform>
+<Rotation>-2.4348578708810464e-14 -0.23669000100316792 -0.9715852219054798 1.6514567491299204e-13 0.97158522190547958 -0.236690001003168 1 -1.6625589793761719e-13 1.5433797500134871e-14</Rotation>
+<Translation>0.069980078274111582 0.017241340166745497 -0.011655115947052175</Translation>
+</Transform>
+</Instance>
+<Instance name="Cabeça1-1" uid="Cabeça1-1" grounded="true" entityUid="Cabeça1*:*Valor predeterminado">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>-0.0089949193612635682 0.029813043810878057 0.03878254127218466</Translation>
+</Transform>
+</Instance>
+<Instance name="Prna1-2" uid="Prna1-2" entityUid="Prna1*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97158522190547969 -2.394293681720272e-14 0.23669000100316867 0.23669000100316867 1.6500560131154659e-13 -0.97158522190547969 -1.5792572359347617e-14 1 1.6598405750520862e-13</Rotation>
+<Translation>0.049147608688047129 0.0069584047277237715 -0.052155115947050912</Translation>
+</Transform>
+</Instance>
+<Instance name="Perna2-1" uid="Perna2-1" entityUid="Perna2*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97158522190547958 -2.4757973449140991e-14 0.23669000100316856 0.23669000100316848 1.6488893583854747e-13 -0.97158522190547958 -1.4960255256823984e-14 0.99999999999999989 1.6607006568525318e-13</Rotation>
+<Translation>0.049147608688046962 0.0069584047277237429 -0.05215511594705094</Translation>
+</Transform>
+</Instance>
+<Instance name="Perna2-2" uid="Perna2-2" entityUid="Perna2*:*Valor predeterminado">
+<Transform>
+<Rotation>0.9715852219054798 -2.4064084058750268e-14 0.23669000100316767 0.23669000100316775 1.6525669721545455e-13 -0.97158522190547958 -1.5792922525292852e-14 0.99999999999999989 1.6622597395765659e-13</Rotation>
+<Translation>-0.030619538030392777 -0.012473844354636771 -0.052155115947049774</Translation>
+</Transform>
+</Instance>
+<Instance name="Perna3-1" uid="Perna3-1" entityUid="Perna3*:*Valor predeterminado">
+<Transform>
+<Rotation>0.96877357145467513 -0.012355122055054044 -0.24763908861477943 0.24768997909113194 0.002750295437004318 0.96883544017177858 -0.011288999459143106 -0.99991989020821759 0.0057246534565468798</Rotation>
+<Translation>-0.03352339023537932 -0.0071681535428370496 -0.32286399606433502</Translation>
+</Transform>
+</Instance>
+<Instance name="Torso1-1" uid="Torso1-1" entityUid="Torso1*:*Valor predeterminado">
+<Transform>
+<Rotation>0.9715852219054798 -2.4171492449692439e-14 0.23669000100316778 0.23669000100316778 1.6508042347974549e-13 -0.9715852219054798 -1.5588220743503254e-14 1 1.6611085045098481e-13</Rotation>
+<Translation>-0.069984406791628886 0.20695288412467558 -0.078529920922683918</Translation>
+</Transform>
+</Instance>
+<Instance name="Perna3-2" uid="Perna3-2" entityUid="Perna3*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97159278395283288 0.0013708446254864697 0.23665498717710667 0.2366589553306056 -0.0054921606799335837 -0.97157726148407386 -3.2134251865966723e-05 0.99998397834969266 -0.005660566341921143</Rotation>
+<Translation>0.049276885511309293 0.0064401481783168263 -0.052170362571158604</Translation>
+</Transform>
+</Instance>
+<Instance name="Braço2-2" uid="Braço2-2" entityUid="Braço2*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97158522190547969 -0.23669000100316848 -2.0110288057727359e-14 0.23669000100316848 0.97158522190547969 1.6724448557740609e-13 -2.0046238773940421e-14 -1.6725217473274941e-13 1</Rotation>
+<Translation>-0.10903449886197365 -0.026368792518083703 0.01459488405295201</Translation>
+</Transform>
+</Instance>
+<Instance name="Braço2-1" uid="Braço2-1" entityUid="Braço2*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97158522190547958 -0.23669000100316837 -3.134359539255868e-14 0.23669000100316842 0.97158522190547969 1.63375988182435e-13 -8.2671378025765933e-15 -1.6615005596450587e-13 0.99999999999999989</Rotation>
+<Translation>0.095484190349129652 0.023454452693083036 0.014594884052947451</Translation>
+</Transform>
+</Instance>
+<Instance name="Prna1-1" uid="Prna1-1" entityUid="Prna1*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97158522190547991 -2.4185658454227556e-14 0.23669000100316781 0.23669000100316781 1.6507859516850581e-13 -0.97158522190547991 -1.5574024519854318e-14 1 1.6611242704243088e-13</Rotation>
+<Translation>-0.030619538030393214 -0.012473844354636915 -0.0521551159470496</Translation>
+</Transform>
+</Instance>
+<Instance name="Perna4-2" uid="Perna4-2" entityUid="Perna4*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97159278395283288 0.0013708446254903548 0.23665498717710659 0.2366589553306056 -0.0054921606799477399 -0.97157726148407364 -3.2134251866438297e-05 0.99998397834969255 -0.0056605663419358309</Rotation>
+<Translation>0.04927688551130982 0.0064401481783149684 -0.052170362571158646</Translation>
+</Transform>
+</Instance>
+<Instance name="Perna5-1" uid="Perna5-1" entityUid="Perna5*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97159278395283311 0.001370844625479165 0.23665498717710631 0.23665895533060527 -0.0054921606798990687 -0.97157726148407386 -3.2134251867127809e-05 0.99998397834969277 -0.005660566341885896</Rotation>
+<Translation>-0.03048943895220875 -0.01299259466890358 -0.052050558200299302</Translation>
+</Transform>
+</Instance>
+<Instance name="Cabeça2-1" uid="Cabeça2-1" entityUid="Cabeça2*:*Valor predeterminado">
+<Transform>
+<Rotation>-0.97158522190547969 0.23669000100316812 -2.441623292437356e-14 -0.23669000100316814 -0.97158522190547969 1.651630221477518e-13 1.5368503525476215e-14 1.6624895904371328e-13 0.99999999999999978</Rotation>
+<Translation>-0.020738492993803186 0.0017408537131038265 -0.024705115947059823</Translation>
+</Transform>
+</Instance>
+<Instance name="Perna4-1" uid="Perna4-1" entityUid="Perna4*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97159278395283311 0.0013708446254808179 0.23665498717710626 0.2366589553306053 -0.0054921606799058038 -0.97157726148407386 -3.2134251867243446e-05 0.99998397834969288 -0.0056605663418928323</Rotation>
+<Translation>-0.030490261207131511 -0.012992100904039032 -0.052170362571157286</Translation>
+</Transform>
+</Instance>
+<Instance name="Perna5-2" uid="Perna5-2" entityUid="Perna5*:*Valor predeterminado">
+<Transform>
+<Rotation>0.97159278395283299 0.0013708446254869899 0.23665498717710659 0.23665895533060563 -0.0054921606799348249 -0.97157726148407353 -3.2134251866244367e-05 0.99998397834969266 -0.0056605663419224891</Rotation>
+<Translation>0.049277707766231242 0.0064396544134555367 -0.052050558200300356</Translation>
+</Transform>
+</Instance>
+<Instance name="peça nova perna 1 - Copia-2" uid="peça nova perna 1 - Copia-2" entityUid="peça nova perna 1 - Copia*:*Default">
+<Transform>
+<Rotation>-0.24215113760256229 -0.012355122055049295 -0.97015987214313804 0.97022202794714574 0.0027502954369885146 -0.24220167704030698 0.0056606575512752264 -0.99991989020821759 0.011321224406974806</Rotation>
+<Translation>-0.048618043670886645 -0.0088682014896001235 -0.31528720605388949</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Concentric name="Concêntrico1">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Cabeça1-1</Uid>
+</InstancePath>
+<Position>-0.023126676649696597 -0.027568205895064639 0.012372342780763393</Position>
+<Axis>-0.97158522190547925 -0.23669000100317017 1.190095201934281e-14</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Cabeça2-1</Uid>
+</InstancePath>
+<Position>0.010240366649453651 -0.0031839302679639017 0.075860000000008199</Position>
+<Axis>1.0000000000000002 1.332267629552147e-15 -3.5851661464109366e-15</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente2">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cabeça1-1</Uid>
+</InstancePath>
+<Position>-0.019434652806455781 -0.026668783891252594 0.012372342780763344</Position>
+<Axis>0.97158522190547925 0.23669000100317017 -1.190095201934281e-14</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cabeça2-1</Uid>
+</InstancePath>
+<Position>0.0071403666494536493 -0.0031839302679639034 0.075860000000008213</Position>
+<Axis>1.0000000000000002 1.332267629552147e-15 -3.5851661464109366e-15</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincidente3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cabeça2-1</Uid>
+</InstancePath>
+<Position>-0.012809633350546952 0.00061213515370646919 0.049200000000007987</Position>
+<Axis>1.0285643841691483e-16 -1.3972129438583115e-16 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.01208459975176767 0.10302480497559703 0.21164912664502578</Position>
+<Axis>-1.1686077961017408e-16 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico2">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Cabeça2-1</Uid>
+</InstancePath>
+<Position>-0.01280963335054695 0.00061213515370646832 0.049600000000007985</Position>
+<Axis>-1.0285643841691483e-16 1.3972129438583115e-16 0.99999999999999978</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.01208459975176767 0.10302480497559703 0.21164912664502578</Position>
+<Axis>-1.1686077961017408e-16 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico3">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.080084599751767682 0.066874804975597044 0.21744912664502578</Position>
+<Axis>1 1.8155206320306596e-16 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Braço1-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente9">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>-0.065915400248232309 0.066874804975597044 0.21744912664502578</Position>
+<Axis>-1 1.2616170734375717e-16 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço1-2</Uid>
+</InstancePath>
+<Position>0 0 0.0010000000000000009</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincidente7">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.090084599751767677 0.066874804975597044 0.2174491266450258</Position>
+<Axis>1 1.8155206320306596e-16 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço1-1</Uid>
+</InstancePath>
+<Position>0 0 0.0010000000000000009</Position>
+<Axis>0 0 1.0000000000000002</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincidente11">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço1-1</Uid>
+</InstancePath>
+<Position>0 0.00050000000000001085 -0.026249999999999996</Position>
+<Axis>-1.1814557070080644e-16 -0.99999999999999989 1.9428902931196592e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço2-1</Uid>
+</InstancePath>
+<Position>0 0.00050000000000000077 -0.026249999999999996</Position>
+<Axis>5.5511151231395128e-16 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico5">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Braço2-1</Uid>
+</InstancePath>
+<Position>0 -0.00050000000000000012 -0.026249999999999996</Position>
+<Axis>5.5511151231395128e-16 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Braço1-1</Uid>
+</InstancePath>
+<Position>0 0.010500000000000013 -0.026249999999999996</Position>
+<Axis>-1.1814557070080644e-16 -0.99999999999999989 1.9428902931196592e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico6">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Braço1-2</Uid>
+</InstancePath>
+<Position>0 0.010500000000000016 -0.026250000000000009</Position>
+<Axis>-1.5788118223435927e-16 -1 1.665334536911448e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Braço2-2</Uid>
+</InstancePath>
+<Position>0 -0.00049999999999999893 -0.026250000000000002</Position>
+<Axis>4.9960036108467192e-16 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente13">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço1-2</Uid>
+</InstancePath>
+<Position>0 0.00050000000000001779 -0.026249999999999996</Position>
+<Axis>-1.5788118223435927e-16 -1 1.665334536911448e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço2-2</Uid>
+</InstancePath>
+<Position>0 0.00050000000000000196 -0.026250000000000002</Position>
+<Axis>4.9960036108467192e-16 1.0000000000000002 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico4">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>-0.055915400248232328 0.066874804975597044 0.21744912664502578</Position>
+<Axis>-1 1.2616170734375717e-16 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Braço1-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente16">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>-0.030920920312750445 -0.042875195024403012 0.2183656217246113</Position>
+<Axis>2.1854783949324913e-16 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Prna1-1</Uid>
+</InstancePath>
+<Position>-0.015367599574052017 -0.069250000000000006 -0.018459650502970576</Position>
+<Axis>0 1 -1.2679294577636308e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico9">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>-0.028965400248232315 -0.042875195024402998 0.22029912664502577</Position>
+<Axis>-2.1854783949324913e-16 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Prna1-1</Uid>
+</InstancePath>
+<Position>-0.015275612415007356 -0.072250000000000009 -0.002209910863131066</Position>
+<Axis>0 1 -1.2679294577636308e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente17">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.055090119816285782 -0.042875195024402998 0.22223263156544029</Position>
+<Axis>-2.1854783949314816e-16 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Prna1-2</Uid>
+</InstancePath>
+<Position>-0.01536759957405201 -0.06925000000000002 -0.018459650502970572</Position>
+<Axis>0 1 -1.2679294577623686e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico11">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.053134599751767653 -0.042875195024403012 0.22029912664502579</Position>
+<Axis>2.1854783949314816e-16 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Prna1-2</Uid>
+</InstancePath>
+<Position>-0.015275612415007349 -0.072250000000000009 -0.0022099108631310656</Position>
+<Axis>0 1 -1.2679294577623686e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente18">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Prna1-2</Uid>
+</InstancePath>
+<Position>-0.01558610445645963 -0.10525000000000001 -0.057059032047450844</Position>
+<Axis>0.0056607482489021699 1.2671055303071755e-16 0.99998397783627657</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna2-1</Uid>
+</InstancePath>
+<Position>-0.013641591963993317 -0.092305456351736981 -0.057070039619502647</Position>
+<Axis>-0.0056607482489022531 0 -0.99998397783627635</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico13">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Prna1-2</Uid>
+</InstancePath>
+<Position>-0.015538071414778969 -0.09425 -0.048573886625779703</Position>
+<Axis>-0.0056607482489021699 -1.2671055303071755e-16 -0.99998397783627657</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna2-1</Uid>
+</InstancePath>
+<Position>-0.015586104456459617 -0.09425 -0.057059032047450824</Position>
+<Axis>0.0056607482489022531 0 0.99998397783627635</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente19">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Prna1-1</Uid>
+</InstancePath>
+<Position>-0.015586104456459637 -0.10525000000000004 -0.057059032047450844</Position>
+<Axis>0.0056607482489021421 1.2671055303064182e-16 0.99998397783627668</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna2-2</Uid>
+</InstancePath>
+<Position>-0.013641591963993303 -0.092305456351736995 -0.057070039619502619</Position>
+<Axis>-0.0056607482489021421 0 -0.99998397783627635</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico15">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Prna1-1</Uid>
+</InstancePath>
+<Position>-0.015538071414778969 -0.094250000000000028 -0.048573886625779709</Position>
+<Axis>-0.0056607482489021421 -1.2671055303061658e-16 -0.99998397783627668</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna2-2</Uid>
+</InstancePath>
+<Position>-0.01558610445645961 -0.094249999999999959 -0.057059032047450789</Position>
+<Axis>0.0056607482489021421 0 0.99998397783627635</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente20">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna2-2</Uid>
+</InstancePath>
+<Position>-0.036055727811388501 -0.092206880437867275 -0.0041558159593135507</Position>
+<Axis>-0.99996795592926258 0.0056607482489055682 0.0056606575514669107</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna3-1</Uid>
+</InstancePath>
+<Position>-0.03628793921582657 -0.13516171226201021 -0.0022209655481077875</Position>
+<Axis>0.9999679559292628 -0.0056607482489056584 -0.0056606575514669289</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico17">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna2-2</Uid>
+</InstancePath>
+<Position>-0.036055852256216277 -0.094162369170722779 -0.0022222793550081806</Position>
+<Axis>0.99996795592926258 -0.0056607482489055682 -0.0056606575514669107</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna3-1</Uid>
+</InstancePath>
+<Position>-0.024499596091120703 -0.17622910216234516 -0.0022876974599980466</Position>
+<Axis>-0.9999679559292628 0.0056607482489056584 0.0056606575514669289</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico19">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna2-1</Uid>
+</InstancePath>
+<Position>-0.036055852256216298 -0.094162369170722765 -0.002222279355008191</Position>
+<Axis>0.99996795592926269 -0.0056607482489054979 -0.0056606575514667988</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna3-2</Uid>
+</InstancePath>
+<Position>-0.027429425960412975 -0.094211202763098231 -0.0022711121649635468</Position>
+<Axis>-0.99996795592926269 0.0056607482489055205 0.0056606575514669914</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente21">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna2-1</Uid>
+</InstancePath>
+<Position>-0.036055727811388501 -0.092206880437867261 -0.0041558159593135576</Position>
+<Axis>-0.99996795592926269 0.0056607482489054979 0.0056606575514667988</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna3-2</Uid>
+</InstancePath>
+<Position>-0.036287939215826598 -0.13516171226201013 -0.0022209655481077823</Position>
+<Axis>0.99996795592926269 -0.0056607482489055205 -0.0056606575514669914</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincidente22">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna3-1</Uid>
+</InstancePath>
+<Position>-0.03628793921582657 -0.13516171226201021 -0.0022209655481077875</Position>
+<Axis>0.9999679559292628 -0.0056607482489056584 -0.0056606575514669289</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna4-1</Uid>
+</InstancePath>
+<Position>-0.036520026175436836 -0.17616105535329718 -0.0022196517412066442</Position>
+<Axis>-0.99996795592926258 0.0056607482489052672 0.0056606575514669523</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico21">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna3-1</Uid>
+</InstancePath>
+<Position>-0.027429425960412968 -0.094211202763098245 -0.0022711121649635476</Position>
+<Axis>-0.9999679559292628 0.0056607482489056584 0.0056606575514669289</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna4-1</Uid>
+</InstancePath>
+<Position>-0.042274841761809755 -0.1761284777471247 -0.002187074656997948</Position>
+<Axis>0.99996795592926258 -0.0056607482489052672 -0.0056606575514669523</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente23">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna3-2</Uid>
+</InstancePath>
+<Position>-0.036287939215826598 -0.13516171226201013 -0.0022209655481077823</Position>
+<Axis>0.99996795592926269 -0.0056607482489055205 -0.0056606575514669914</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna4-2</Uid>
+</InstancePath>
+<Position>-0.036520026175436857 -0.17616105535329715 -0.0022196517412066477</Position>
+<Axis>-0.99996795592926269 0.0056607482489051232 0.0056606575514669645</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico23">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna3-2</Uid>
+</InstancePath>
+<Position>-0.024499596091120721 -0.17622910216234516 -0.0022876974599980457</Position>
+<Axis>-0.99996795592926269 0.0056607482489055205 0.0056606575514669914</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna4-2</Uid>
+</InstancePath>
+<Position>-0.042274841761809755 -0.17612847774712467 -0.0021870746569979524</Position>
+<Axis>0.99996795592926269 -0.0056607482489051232 -0.0056606575514669645</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente24">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna4-1</Uid>
+</InstancePath>
+<Position>-0.036873169264842513 -0.21754558013304159 -0.023217989125881158</Position>
+<Axis>0.99996795592926258 -0.0056607482489052681 -0.0056606575514669523</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna5-1</Uid>
+</InstancePath>
+<Position>-0.037038006527083805 -0.24666492178070673 -0.023217056008686992</Position>
+<Axis>-0.9999679559292628 0.0056607482489052169 0.0056606575514669636</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico26">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna4-1</Uid>
+</InstancePath>
+<Position>-0.025441148723083076 -0.24661076064725723 -0.023282703953015873</Position>
+<Axis>-0.99996795592926258 0.0056607482489052681 0.0056606575514669523</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna5-1</Uid>
+</InstancePath>
+<Position>-0.042792822113456724 -0.24663234417453436 -0.023184478924478304</Position>
+<Axis>0.9999679559292628 -0.0056607482489052169 -0.0056606575514669636</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente25">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna4-2</Uid>
+</InstancePath>
+<Position>-0.03687316926484252 -0.21754558013304148 -0.023217989125881161</Position>
+<Axis>0.99996795592926269 -0.0056607482489051241 -0.0056606575514669645</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna5-2</Uid>
+</InstancePath>
+<Position>-0.037038006527083819 -0.24666492178070681 -0.023217056008686992</Position>
+<Axis>-0.9999679559292628 0.005660748248905197 0.0056606575514669844</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico27">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna4-2</Uid>
+</InstancePath>
+<Position>-0.025441148723083097 -0.24661076064725712 -0.023282703953015876</Position>
+<Axis>-0.99996795592926269 0.0056607482489051241 0.0056606575514669645</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna5-2</Uid>
+</InstancePath>
+<Position>-0.042792822113456717 -0.24663234417453433 -0.023184478924478297</Position>
+<Axis>0.9999679559292628 -0.005660748248905197 -0.0056606575514669844</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente26">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna5-2</Uid>
+</InstancePath>
+<Position>-0.014296740712908963 -0.24924739292617554 0.033605121824914014</Position>
+<Axis>0.0056607482489017475 0 0.99998397783627635</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>peça nova perna 1 - Copia-1</Uid>
+</InstancePath>
+<Position>-0.040424999999999996 -0.027000000000000024 0.010999999999999985</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico29">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna5-2</Uid>
+</InstancePath>
+<Position>-0.016219114146534742 -0.24728095910872755 0.033616004071319296</Position>
+<Axis>-0.0056607482489017475 0 -0.99998397783627635</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>peça nova perna 1 - Copia-1</Uid>
+</InstancePath>
+<Position>-0.031939718625761428 -0.016000000000000014 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincidente27">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Perna5-1</Uid>
+</InstancePath>
+<Position>-0.01429674071290897 -0.24924739292617551 0.033605121824914021</Position>
+<Axis>0.0056607482489018065 0 0.99998397783627624</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>peça nova perna 1 - Copia-2</Uid>
+</InstancePath>
+<Position>-0.040424999999999989 -0.026999999999999968 0.010999999999999989</Position>
+<Axis>1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concêntrico31">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna5-1</Uid>
+</InstancePath>
+<Position>-0.016219114146534735 -0.24728095910872752 0.033616004071319289</Position>
+<Axis>-0.0056607482489018065 0 -0.99998397783627624</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>peça nova perna 1 - Copia-2</Uid>
+</InstancePath>
+<Position>-0.031939718625761414 -0.015999999999999959 0</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico20">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna3-2</Uid>
+</InstancePath>
+<Position>-0.027365382417900909 -0.088554439148650729 0.003385470180846133</Position>
+<Axis>-0.99996795592926269 0.0056607482489055205 0.0056606575514669914</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna2-1</Uid>
+</InstancePath>
+<Position>-0.035991809736916042 -0.088537717704593039 0.0034662349009541267</Position>
+<Axis>-0.99996795592926269 0.0056607482489054979 0.0056606575514667988</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Parallel name="Paralelo3">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cabeça2-1</Uid>
+</InstancePath>
+<Position>-0.044809633350546961 0.020112135153706471 0.051000000000007983</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.0068345997517676692 0.1437695309948378 0.2280491266450258</Position>
+<Axis>3.3306690738495762e-16 0 1</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Parallel name="Paralelo1">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cabeça1-1</Uid>
+</InstancePath>
+<Position>-0.0019426705588022133 -0.027888468861606661 0.026607079780764105</Position>
+<Axis>3.1171086136308318e-14 -1.6353699750106297e-13 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Cabeça2-1</Uid>
+</InstancePath>
+<Position>-0.0078033691337505897 0.0051030717095977111 0.051000000000007983</Position>
+<Axis>0 0 -0.99999999999999978</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Parallel name="Paralelo5">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.012084599751767688 0.023874804975597033 0.24129912664502579</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço1-1</Uid>
+</InstancePath>
+<Position>0 -0.0069999999999999889 0</Position>
+<Axis>0 -0.99999999999999989 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Parallel name="Paralelo6">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>-0.036915400248232325 0.072374804975597035 0.22344912664502578</Position>
+<Axis>0 8.9818333649174319e-16 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço1-2</Uid>
+</InstancePath>
+<Position>0 -0.0069999999999999923 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Parallel name="Paralelo7">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço1-1</Uid>
+</InstancePath>
+<Position>0 0.0050000000000000044 -0.0029999999999999888</Position>
+<Axis>0 0 -1.0000000000000002</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço2-1</Uid>
+</InstancePath>
+<Position>0.0074999999999999928 -0.00050000000000000456 -0.028750000000000046</Position>
+<Axis>1 -5.2735593669437481e-16 -7.278541118092849e-15</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Concentric name="Concêntrico12">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>0.058823385394002212 -0.042875195024402998 0.22592386823168611</Position>
+<Axis>-2.1854783949314816e-16 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Prna1-2</Uid>
+</InstancePath>
+<Position>-0.0095868267727727968 -0.075361269837220801 0.0034148307235292536</Position>
+<Axis>0 1 -1.2679294577623686e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Parallel name="Paralelo8">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço1-2</Uid>
+</InstancePath>
+<Position>0 0.0050000000000000079 -0.0030000000000000027</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Braço2-2</Uid>
+</InstancePath>
+<Position>0.0074999999999999789 -0.00050000000000000066 -0.028750000000000053</Position>
+<Axis>1.0000000000000002 -6.1062266353927441e-16 -7.2278920375156707e-15</Axis>
+</ConstraintGeometry>
+</Parallel>
+<Concentric name="Concêntrico10">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Torso1-1</Uid>
+</InstancePath>
+<Position>-0.023276614605997763 -0.042875195024403012 0.22592386823168609</Position>
+<Axis>2.1854783949324913e-16 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Prna1-1</Uid>
+</InstancePath>
+<Position>-0.0095868267727727968 -0.075361269837220801 0.0034148307235292502</Position>
+<Axis>0 1 -1.2679294577636308e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico16">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Prna1-1</Uid>
+</InstancePath>
+<Position>-0.021210846043119957 -0.088593145750507613 -0.051370246405216306</Position>
+<Axis>-0.0056607482489021421 -1.2671055303061658e-16 -0.99998397783627668</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna2-2</Uid>
+</InstancePath>
+<Position>-0.021242868070907049 -0.088593145750507571 -0.05702701001966369</Position>
+<Axis>-0.0056607482489021421 0 -0.99998397783627635</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico14">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Prna1-2</Uid>
+</InstancePath>
+<Position>-0.021210846043119951 -0.088593145750507613 -0.051370246405216313</Position>
+<Axis>-0.0056607482489021699 -1.2671055303071755e-16 -0.99998397783627657</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna2-1</Uid>
+</InstancePath>
+<Position>-0.021242868070907039 -0.088593145750507585 -0.057027010019663718</Position>
+<Axis>-0.0056607482489022531 0 -0.99998397783627635</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico18">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna2-2</Uid>
+</InstancePath>
+<Position>-0.036055490234899089 -0.088473674675143152 -0.0078471131129874278</Position>
+<Axis>-0.99996795592926258 0.0056607482489055682 0.0056606575514669107</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna3-1</Uid>
+</InstancePath>
+<Position>-0.024499595578058555 -0.18188586577679264 0.0033692474230870772</Position>
+<Axis>-0.9999679559292628 0.0056607482489056584 0.0056606575514669289</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico22">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna3-1</Uid>
+</InstancePath>
+<Position>-0.027429425447350813 -0.099867966377545553 0.0033858327181217045</Position>
+<Axis>-0.9999679559292628 0.0056607482489056584 0.0056606575514669289</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna4-1</Uid>
+</InstancePath>
+<Position>-0.036520026688498998 -0.17050429173885012 -0.0078765966242914185</Position>
+<Axis>-0.99996795592926258 0.0056607482489052672 0.0056606575514669523</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico24">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna3-2</Uid>
+</InstancePath>
+<Position>-0.024499596604182883 -0.17057233854789766 -0.0079446423430831279</Position>
+<Axis>-0.99996795592926269 0.0056607482489055205 0.0056606575514669914</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna4-2</Uid>
+</InstancePath>
+<Position>-0.036520026688499012 -0.17050429173885012 -0.0078765966242914237</Position>
+<Axis>-0.99996795592926269 0.0056607482489051232 0.0056606575514669645</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico25">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna4-1</Uid>
+</InstancePath>
+<Position>-0.031316611810468374 -0.24092037390363319 -0.017592499016745013</Position>
+<Axis>-0.99996795592926258 0.0056607482489052681 0.0056606575514669523</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna5-1</Uid>
+</InstancePath>
+<Position>-0.036973962984571757 -0.24100815816625973 -0.017560473662877663</Position>
+<Axis>-0.9999679559292628 0.0056607482489052169 0.0056606575514669636</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico28">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna4-2</Uid>
+</InstancePath>
+<Position>-0.031380655866042627 -0.24092037390363336 -0.028906026245639947</Position>
+<Axis>-0.99996795592926269 0.0056607482489051241 0.0056606575514669645</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna5-2</Uid>
+</InstancePath>
+<Position>-0.037038007040145968 -0.24100815816625976 -0.028874000891771768</Position>
+<Axis>-0.9999679559292628 0.005660748248905197 0.0056606575514669844</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico30">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna5-2</Uid>
+</InstancePath>
+<Position>-0.021811473226173359 -0.24156042436706077 0.033647661515407344</Position>
+<Axis>0.0056607482489017475 0 0.99998397783627635</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>peça nova perna 1 - Copia-1</Uid>
+</InstancePath>
+<Position>-0.034768145750507622 -0.02165685424949243 0.0056568542494924018</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concêntrico32">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Perna5-1</Uid>
+</InstancePath>
+<Position>-0.021811473226173349 -0.24156042436706074 0.033647661515407337</Position>
+<Axis>0.0056607482489018065 0 0.99998397783627624</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>peça nova perna 1 - Copia-2</Uid>
+</InstancePath>
+<Position>-0.034768145750507601 -0.021656854249492319 0.0056568542494924157</Position>
+<Axis>-1.0000000000000002 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="Braço1" uid="Braço1*:*Valor predeterminado" version="110">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Braço1.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.01268</Mass>
+<CenterOfMass>-3.0018007494622689e-08 0.0088884890119879205 -0.010552984461563497</CenterOfMass>
+<Inertia>2.1850579245871695e-06 1.9320653434184418e-06 1.3671213044201861e-06 6.5438889015841588e-07 2.3264508353505907e-12 5.4389924065509758e-14</Inertia>
+</MassProperties>
+<GeometryFile name="Braço1_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Braço2" uid="Braço2*:*Valor predeterminado" version="108">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Braço2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0092998463034132967</Mass>
+<CenterOfMass>-1.0822939543200251e-10 -0.0019063356869134561 -0.053964429010478765</CenterOfMass>
+<Inertia>8.6900111331187865e-06 8.7095568993366745e-06 3.6587155207529662e-07 -2.8188096369999621e-07 2.8649395350004004e-15 -7.4075374477689516e-15</Inertia>
+</MassProperties>
+<GeometryFile name="Braço2_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Cabeça1" uid="Cabeça1*:*Valor predeterminado" version="209">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Cabeça1.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.046702058111420669</Mass>
+<CenterOfMass>0.0016837689229509301 -0.028880369532285864 0.038575695273141419</CenterOfMass>
+<Inertia>2.8053387093886185e-05 3.8669127409995855e-05 2.6485321296381368e-05 -1.0363267468281596e-07 1.649248188130281e-07 -2.7998672949621945e-06</Inertia>
+</MassProperties>
+<GeometryFile name="Cabeça1_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Cabeça2" uid="Cabeça2*:*Valor predeterminado" version="125">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Cabeça2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.020014459484501583</Mass>
+<CenterOfMass>-0.012271527828648853 -0.0011249761400152108 0.06420328481000423</CenterOfMass>
+<Inertia>3.5551060196574072e-06 8.3615631941765282e-06 7.7642223507015314e-06 1.7557459602961272e-07 -7.3652603424061946e-07 1.3007580879758276e-07</Inertia>
+</MassProperties>
+<GeometryFile name="Cabeça2_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Perna2" uid="Perna2*:*Valor predeterminado" version="125">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Perna2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.11839999999999999</Mass>
+<CenterOfMass>-0.016003274612456417 -0.10735829046562674 -0.019584966021459333</CenterOfMass>
+<Inertia>7.1614963926909072e-05 6.1027632184235825e-05 3.2666487848623581e-05 -3.7198548308511247e-07 9.1114050323632888e-07 1.8102632446036027e-07</Inertia>
+</MassProperties>
+<GeometryFile name="Perna2_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Perna3" uid="Perna3*:*Valor predeterminado" version="108">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Perna3.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0090302810157936314</Mass>
+<CenterOfMass>-0.010109931510401501 -0.1350189675947559 -0.0023691550337025277</CenterOfMass>
+<Inertia>1.0110866140212263e-05 4.4403967512234664e-06 1.3647945465559937e-05 -2.4529437426731902e-10 2.0023391162989331e-08 4.3223808041265674e-08</Inertia>
+</MassProperties>
+<GeometryFile name="Perna3_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Perna4" uid="Perna4*:*Valor predeterminado" version="109">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Perna4.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.084099999999999994</Mass>
+<CenterOfMass>-0.016175269760635928 -0.18358628701088767 -0.01522286952801072</CenterOfMass>
+<Inertia>3.0134111436191451e-05 1.7766544134633068e-05 3.0485154435622155e-05 -3.1336315856214991e-06 4.8049290429473399e-07 8.0052653389138857e-07</Inertia>
+</MassProperties>
+<GeometryFile name="Perna4_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Perna5" uid="Perna5*:*Valor predeterminado" version="127">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Perna5.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.1421</Mass>
+<CenterOfMass>-0.016433921125226542 -0.23486909243377874 -0.0044319479413229296</CenterOfMass>
+<Inertia>7.440039929770126e-05 6.5067150847352247e-05 2.9364563949697225e-05 -2.224041504356085e-06 -3.2636820251899045e-07 -4.7211391469299426e-07</Inertia>
+</MassProperties>
+<GeometryFile name="Perna5_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Prna1" uid="Prna1*:*Valor predeterminado" version="116">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Prna1.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0134</Mass>
+<CenterOfMass>-0.015325588198115036 -0.080989990814635843 -0.011038271688872775</CenterOfMass>
+<Inertia>1.6521388045225089e-05 1.5383854361060358e-05 2.2693263825107018e-06 1.021157136144943e-06 -8.0677160553637781e-08 5.7895082199980215e-09</Inertia>
+</MassProperties>
+<GeometryFile name="Prna1_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Torso1" uid="Torso1*:*Valor predeterminado" version="1077">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Torso1.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.74757847366654484</Mass>
+<CenterOfMass>0.012661167101824035 0.012580699763286624 0.21657104350415451</CenterOfMass>
+<Inertia>0.0013934566774408395 0.0013412218127738117 0.0014332217794920509 0.00031264337538004767 1.8604650332277179e-06 -1.3877281258589838e-05</Inertia>
+</MassProperties>
+<GeometryFile name="Torso1_Valor predeterminado_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+<Part name="peça nova perna 1 - Copia" uid="peça nova perna 1 - Copia*:*Default" version="1135">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="peça nova perna 1 - Copia.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.021999999999999999</Mass>
+<CenterOfMass>-0.0034394804467906444 -0.00036955894188531055 1.7812528107753112e-07</CenterOfMass>
+<Inertia>5.2683745822589013e-06 2.9826186580599053e-05 2.5733964720395633e-05 3.2722656935319478e-11 -1.2020243457213548e-10 6.5937518176496298e-08</Inertia>
+</MassProperties>
+<GeometryFile name="peça nova perna 1 - Copia_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.40000000596046448</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>

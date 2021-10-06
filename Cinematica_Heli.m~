@@ -1,0 +1,448 @@
+%HELICOIDES
+clear all
+clc
+close all
+%axf=15;
+%%azf=25;
+%axt=20;
+%azt=20;
+angt=0;
+Pc_g=0;
+gait=0.3;
+%ang_tr=8;
+passos=16;
+%graf=1; % quanto quer mostrar a cinemática graf = 1
+%csv=1; %csv = 1 para gerar o arquivo de memória pra o robô real
+lx=[-75  0  21	0	0	0       0	0	0	92.5 ]; %Comprimentos na direção x, ultimo � transforma��o da ferramenta
+ly=[0    0  0   0	0  0	-177.9	0	0	0	0    ]; %Comprimentos na dire��o y
+lz=[19.5 0	70,39	82 0	0	0       0 	-84	-60	-20.5 ]; %Comprimentos na dire��o z
+lxr(1)=lx(1);
+lyr(1)=ly(1);
+lzr(1)=lz(1);
+for i=2:length(lz) %Resultante dos comprimentos para modelagem por helicoide
+    lxr(i)=lx(i)+lxr(i-1);
+    lyr(i)=ly(i)+lyr(i-1); 
+    lzr(i)=lz(i)+lzr(i-1);
+end
+PH=[0	-1	0  lxr(1)  lyr(1)  lzr(1) %sx sy sz s0x s0y s0z(Parametros helicoide)
+    0	-1	0  lxr(2)  lyr(2)  lzr(2) %Eixo dos motores de cada junta
+    0	-1	0 lxr(3)  lyr(3)  lzr(3) 
+    0	0	-1  lxr(4)  lyr(4)  lzr(4)
+    0	0	-1  lxr(5)  lyr(5)  lzr(5)
+    0	-1	0 lxr(6)  lyr(6)  lzr(6)
+    0	-1	0  lxr(7)  lyr(7)  lzr(7)
+    0	-1	0  lxr(8)  lyr(8)  lzr(8) ];
+CMX=[-75.13 0   0       0       14.13	0	0       0	19.85];
+CMY=[0      0	0       -16.47	-45.75	-24	0       0	0	 ];
+CMZ=[16.29  32	21.49   20.47	82      0	-42.26	-28	-4.2 ];
+CMXr(1)=CMX(1);
+CMYr(1)=CMY(1);
+CMZr(1)=CMZ(1);
+for i=2:length(lz) %Resultante dos comprimentos para modelagem por helicoide
+    CMXr(i)=CMX(i)+lxr(i-1);
+    CMYr(i)=CMY(i)+lyr(i-1);
+    CMZr(i)=CMZ(i)+lzr(i-1);
+end
+M=[72.5 11.4 72.1 69 951.1 69 72.1 11.4 72.5];
+%% Cinem�tica (Desenvoler o movimento) 
+q=[0 0 0 0 0 0 0 0]; %angulos 
+Q(1,1:8)=q;
+taxa=1/400; %Taxa de move 
+delta=0.0001;  
+delay_ini=0; 
+X_E(1)=0;
+Z_E(1)=0;
+X_D(1)=0;
+Z_D(1)=0;
+    X=zeros(1,10);
+    Y=zeros(1,10);
+    Z=zeros(1,10);
+    X(1)=0;
+    Y(1)=0;
+    Z(1)=0;
+    X(2)=lxr(1);
+    Y(2)=lyr(1);
+    Z(2)=lzr(1);
+    X_CM(1)=CMXr(1);
+    Y_CM(1)=CMYr(1);
+    Z_CM(1)=CMZr(1);
+    fx=1;%rand(1);
+    fz=1;%rand(1);
+    fCMx=1;%rand(1);
+    fCMz=1;%rand(1);
+    for cont_passos=1:passos
+        if 1
+            q_aux=q;
+            for i=1:length(q_aux)
+                q(i)=-q_aux(length(q_aux)+1-i);                
+            end
+        end
+        q_aux=q;
+        if cont_passos>0
+            lx=[X(10)-92.5   0.8	0	0	0                      	0       0	-0.8	92.5 ]; %Comprimentos na dire��o x, ultimo � transforma��o da ferramenta
+            ly=[Y(10)       0   0	0	177.9*(-1)^(cont_passos-1)	0       0	0       0    ]; %Comprimentos na dire��o y
+            lz=[Z(10)+20.5	60	84	0.8	0                           -0.8 	-84	-60     -20.5 ]; %Comprimentos na dire��o z
+            lxr(1)=lx(1);
+            lyr(1)=ly(1);
+            lzr(1)=lz(1);
+            X(2)=lxr(1);
+            Y(2)=lyr(1);
+            Z(2)=lzr(1);
+            for i=2:length(lz) %Resultante dos comprimentos para modelagem por helicoide
+                lxr(i)=lx(i)+lxr(i-1);
+                lyr(i)=ly(i)+lyr(i-1);
+                lzr(i)=lz(i)+lzr(i-1);
+            end
+            PH=[0	-1^(cont_passos-1)	0  lxr(1)  lyr(1)  lzr(1) %sx sy sz s0x s0y s0z(Parametros helicoide)
+                0	-1^(cont_passos-1)	0  lxr(2)  lyr(2)  lzr(2) %Eixo dos motores de cada junta
+                0	-1^(cont_passos-1)	0  lxr(3)  lyr(3)  lzr(3) 
+                0	0	-1 lxr(4)  lyr(4)  lzr(4)
+                0	0	-1 lxr(5)  lyr(5)  lzr(5)
+                0	-1^(cont_passos-1)	0  lxr(6)  lyr(6)  lzr(6)
+                0	-1^(cont_passos-1)	0  lxr(7)  lyr(7)  lzr(7)
+                0	-1^(cont_passos-1)	0  lxr(8)  lyr(8)  lzr(8) ];
+             X(1)=X(10);
+            Y(1)=Y(10);
+            Z(1)=Z(10);
+            X(2)=lxr(1);
+            Y(2)=lyr(1);
+            Z(2)=lzr(1);
+        end
+        for j=1:round(gait/taxa) 
+            q_aux=q;
+            if j<Pc_g*round(gait/taxa)
+                Xd=[0 0 0 0 0 0 0 0];
+                %Xd=[axf*sin(pi*j*taxa/gait) 0 azf*cos(pi*j*taxa/gait)  0 0 0 0 0];  
+            else 
+                Xd=[axf*sin(pi*(j-Pc_g*(gait/taxa))*taxa*(1-Pc_g)/gait) 0 azf*cos(pi*(j-Pc_g*(gait/taxa))*taxa*(1-Pc_g)/gait)  0 0 0 0 0];                  
+            end            
+            
+           % Xd=[0.0005 0 0  0 0 0 0 0]; %a*2*fCMz*cos(pi*j*taxa/gait Velocidade
+            Xd=transpose(Xd);
+            X_aux=X;
+            Y_aux=Y;
+            Z_aux=Z;
+            Tr=eye(4); 
+            q=q*pi/180;
+            for i=1:length(lz)-1 %Determina a posi��o do rob� (em cada instante de tempo)
+                a11=cos(q(i))+(1-cos(q(i)))*PH(i,1)^2;              %Termos da matriz de rota��o da Transformada
+                a12=PH(i,1)*PH(i,2)*(1-cos(q(i)))-PH(i,3)*sin(q(i));%por helicoide
+                a13=PH(i,1)*PH(i,3)*(1-cos(q(i)))+PH(i,2)*sin(q(i));
+                a21=PH(i,2)*PH(i,1)*(1-cos(q(i)))+PH(i,3)*sin(q(i));
+                a22=cos(q(i))+(1-cos(q(i)))*PH(i,2)^2;
+                a23=PH(i,2)*PH(i,3)*(1-cos(q(i)))-PH(i,1)*sin(q(i));
+                a31=PH(i,3)*PH(i,1)*(1-cos(q(i)))-PH(i,2)*sin(q(i));
+                a32=PH(i,3)*PH(i,2)*(1-cos(q(i)))+PH(i,1)*sin(q(i));
+                a33=cos(q(i))+(1-cos(q(i)))*PH(i,3)^2;
+                T=[a11 a12 a13 PH(i,4)-PH(i,4)*a11-PH(i,5)*a12-PH(i,6)*a13 %Matriz Tab
+                    a21 a22 a23 PH(i,5)-PH(i,4)*a21-PH(i,5)*a22-PH(i,6)*a23
+                    a31 a32 a33 PH(i,6)-PH(i,4)*a31-PH(i,5)*a32-PH(i,6)*a33
+                    0 0 0 1];
+                Tf=[1 0 0 lxr(i+1)   %Matriz de transforma��o da ferramenta(prox junta)
+                    0 1 0 lyr(i+1)
+                    0 0 1 lzr(i+1) 
+                    0 0 0 1];
+                Tf_CM=[1 0 0 CMXr(i+1)   %Matriz de transforma��o do centro de Massa
+                       0 1 0 CMYr(i+1)
+                       0 0 1 CMZr(i+1) 
+                       0 0 0 1];
+                Tr=Tr*T;
+                TF=Tr*Tf; %Transforma�ao final(da prox junta)
+                TF_CM=Tr*Tf_CM; %Transforma�ao final(do centro de massa da da pe�a em quest�o)
+                X(i+2)=TF(1,4);  %posi��o x
+                Y(i+2)=TF(2,4); %posi��o y
+                Z(i+2)=TF(3,4); %posi��o z
+                Theta_X(i+1)=atan(TF(3,2)/TF(3,3));
+                Theta_Y(i+1)=atan(-TF(3,1)/sqrt(TF(3,2)^2+TF(3,3)^2));
+                Theta_Z(i+1)=atan(TF(2,1)/TF(1,1));
+                X_CM(i+1)=TF_CM(1,4); %pos x do CM
+                Y_CM(i+1)=TF_CM(2,4); %pos x do CM
+                Z_CM(i+1)=TF_CM(3,4); %pos x do CM
+            end 
+            Xg(j)=X(i+2);
+            Yg(j)=Y(i+2);
+            Zg(j)=Z(i+2);
+            CMX_F=0;
+            CMY_F=0;
+            CMZ_F=0;
+            Mt=0;
+            for i=1:length(lzr)
+                CMX_F=CMX_F+M(i)*X_CM(i);
+                CMY_F=CMY_F+M(i)*Y_CM(i);
+                CMZ_F=CMZ_F+M(i)*Z_CM(i);
+                Mt=Mt+M(i);
+            end
+            CMX_F=CMX_F/Mt;
+            CMY_F=CMY_F/Mt;
+            CMZ_F=CMZ_F/Mt; 
+            if  graf && (mod(j,10)==0 ||j==1)
+                plot3(X,Y,Z);
+                hold on
+               % plot3([CMX_F CMX_F],[CMY_F CMY_F],[CMZ_F 0]);
+                grid on
+                grid minor
+                axis([-100 400 -100 300 -100 350])
+                %M(2*i)=getframe;
+                pause(taxa*10)
+                %cla;
+                %hold off
+            end 
+            for k=1:length(q)
+                q(k)=q(k)+delta;
+                Tr=eye(4); 
+                for i=1:length(lz)-1 %Determina a posi��o do rob�(em cada instante de tempo
+                    a11=cos(q(i))+(1-cos(q(i)))*PH(i,1)^2;              %Termos da matriz de rota��o da Transformada
+                    a12=PH(i,1)*PH(i,2)*(1-cos(q(i)))-PH(i,3)*sin(q(i));%por helicoide
+                    a13=PH(i,1)*PH(i,3)*(1-cos(q(i)))+PH(i,2)*sin(q(i));
+                    a21=PH(i,2)*PH(i,1)*(1-cos(q(i)))+PH(i,3)*sin(q(i));
+                    a22=cos(q(i))+(1-cos(q(i)))*PH(i,2)^2;
+                    a23=PH(i,2)*PH(i,3)*(1-cos(q(i)))-PH(i,1)*sin(q(i));
+                    a31=PH(i,3)*PH(i,1)*(1-cos(q(i)))-PH(i,2)*sin(q(i));
+                    a32=PH(i,3)*PH(i,2)*(1-cos(q(i)))+PH(i,1)*sin(q(i));
+                    a33=cos(q(i))+(1-cos(q(i)))*PH(i,3)^2;
+                    T=[a11 a12 a13 PH(i,4)-PH(i,4)*a11-PH(i,5)*a12-PH(i,6)*a13 %Matriz Tab
+                        a21 a22 a23 PH(i,5)-PH(i,4)*a21-PH(i,5)*a22-PH(i,6)*a23
+                        a31 a32 a33 PH(i,6)-PH(i,4)*a31-PH(i,5)*a32-PH(i,6)*a33
+                        0 0 0 1];
+                    Tf=[1 0 0 lxr(i+1)   %Matriz de transforma��o da ferramenta
+                        0 1 0 lyr(i+1)
+                        0 0 1 lzr(i+1) 
+                        0 0 0 1];
+                    Tf_CM=[1 0 0 CMXr(i+1)   %Matriz de transforma��o do centro de Massa
+                           0 1 0 CMYr(i+1)
+                           0 0 1 CMZr(i+1) 
+                           0 0 0 1];
+                    Tr=Tr*T;
+                    TF=Tr*Tf; %Transforma�ao final
+                    TF_CM=Tr*Tf_CM; %Transforma�ao final(do centro de massa da da pe�a em quest�o)
+                    Xj(i+1)=TF(1,4);  %posi��o x
+                    Yj(i+1)=TF(2,4); %posi��o y
+                    Zj(i+1)=TF(3,4); %posi��o z
+                    Theta_Xj(i+1)=atan(TF(3,2)/TF(3,3));
+                    Theta_Yj(i+1)=atan(-TF(3,1)/sqrt(TF(3,2)^2+TF(3,3)^2));
+                    Theta_Zj(i+1)=atan(TF(2,1)/TF(1,1));
+                    X_CMj(i+1)=TF_CM(1,4); %pos x do CM
+                    Y_CMj(i+1)=TF_CM(2,4); %pos x do CM
+                    Z_CMj(i+1)=TF_CM(3,4); %pos x do CM
+                end
+                CMX_Fj=0;
+                CMY_Fj=0;
+                CMZ_Fj=0;
+                Mt=0;
+                for p=1:length(lzr)
+                    CMX_Fj=CMX_Fj+M(p)*X_CMj(p);
+                    CMY_Fj=CMY_Fj+M(p)*Y_CMj(p);
+                    CMZ_Fj=CMZ_Fj+M(p)*Z_CMj(p);
+                    Mt=Mt+M(p);
+                end
+                CMX_Fj=CMX_Fj/Mt;
+                CMY_Fj=CMY_Fj/Mt;
+                CMZ_Fj=CMZ_Fj/Mt;
+                J(1,k)=(Xj(i+1)-X(i+1))/delta;
+                J(2,k)=(Yj(i+1)-Y(i+1))/delta;
+                J(3,k)=(Zj(i+1)-Z(i+1))/delta; 
+                J(4,k)=(Theta_Yj(i+1)-Theta_Y(i+1))/delta;
+                J(5,k)=(Theta_Zj(i+1)-Theta_Z(i+1))/delta;
+                %J(7,k)=(CMX_Fj-CMX_F)/delta; 
+                %J(7,k)=(CMY_Fj-CMY_F)/delta;
+                J(6,k)=(Theta_Yj(2)-Theta_Y(2))/delta;
+                J(7,k)=(Theta_Yj(3)-Theta_Y(3))/delta;
+                %J(9,k)=(CMZ_Fj-CMZ_F)/delta;
+                J(8,k)=(Theta_Yj(4)-Theta_Y(4))/delta;
+                %J(10,k)=(Theta_Zj(i-5)-Theta_Z(i-5))/delta;                 
+                q(k)=q(k)-delta;
+            end
+            Jq=inv(J); 
+            %det(Jq)
+            %det(J)
+            qd=Jq*Xd;
+            qd=transpose(qd);
+            q=qd*taxa+q;
+            q=q*180/pi;
+   
+            if j>Pc_g*round(gait/taxa)
+                if j>3
+                    q(1)=q(1)-q_aux(1)/round(gait/taxa);
+                    q(2)=q(2)-q_aux(2)/round(gait/taxa);
+                    q(3)=q(3)-q_aux(3)/round(gait/taxa);
+                end
+                if cont_passos==1
+                    q(4)=ang_tr*sin(pi*(j-Pc_g*round(gait/taxa))/(2*(round(gait/taxa)-Pc_g*round(gait/taxa))))*(-1)^(1-mod(cont_passos,2));%*(-1^(cont_passos));
+                    q(5)=-ang_tr*sin(pi*(j-Pc_g*round(gait/taxa))/(2*(round(gait/taxa)-Pc_g*round(gait/taxa))))*(-1)^(1-mod(cont_passos,2));%*(-1^(cont_passos));
+                end
+                if cont_passos>1
+                    q(4)=ang_tr*sin(-pi/2+pi*(j-Pc_g*round(gait/taxa))/((round(gait/taxa)-Pc_g*round(gait/taxa))))*(-1)^(1-mod(cont_passos,2));%*(-1^(cont_passos));
+                    q(5)=-ang_tr*sin(-pi/2+pi*(j-Pc_g*round(gait/taxa))/((round(gait/taxa)-Pc_g*round(gait/taxa))))*(-1)^(1-mod(cont_passos,2));%*(-1^(cont_passos));
+                end
+            end
+            if j<Pc_g*round(gait/taxa)
+                q(8)=-angt*cos(-pi/2+pi*j/(Pc_g*round(gait/taxa)));
+            end 
+            if q(7)>0
+                q(7)=0;
+            end            
+            for i=1:length(q)
+                if q(i)>360
+                    q(i)=mod(q(i),360);
+                end
+                if q(i)<-360
+                    q(i)=360-mod(-q(i),360);
+                end
+            end
+            for cont_ver=1:8                
+                if (q(cont_ver)-q_aux(cont_ver))*60/(360*taxa)>50
+                    %q(cont_ver)=q_aux(cont_ver)+300*taxa;
+                end
+                if (q(cont_ver)-q_aux(cont_ver))*60/(360*taxa)<50
+                    %q(cont_ver)=q_aux(cont_ver)-300*taxa;
+                end
+            end
+            if mod(cont_passos,2)==1
+                for i=1:length(q)
+                    if i>3
+                        Q(round(gait/taxa)*(cont_passos-1)+j+1,i)=q(i);
+                    else
+                        Q(round(gait/taxa)*(cont_passos-1)+j+1,i)=-q(i);
+                    end
+                end
+            end
+            if mod(cont_passos,2)==0
+                for i=1:length(q)
+                    if i>3
+                        Q(round(gait/taxa)*(cont_passos-1)+j+1,i)=-q(length(q)+1-i);
+                    else
+                        Q(round(gait/taxa)*(cont_passos-1)+j+1,i)=q(length(q)+1-i);
+                    end
+                end
+            end  
+            if mod(cont_passos,2)==1
+                X_E(round(gait/taxa)*(cont_passos-1)+j+1)=X(length(X));
+                Z_E(round(gait/taxa)*(cont_passos-1)+j+1)=Z(length(Z));
+                X_D(round(gait/taxa)*(cont_passos-1)+j+1)=X_D(round(gait/taxa)*(cont_passos-1)+j);
+                Z_D(round(gait/taxa)*(cont_passos-1)+j+1)=Z_D(round(gait/taxa)*(cont_passos-1)+j);
+            end
+            if mod(cont_passos,2)==0
+                X_E(round(gait/taxa)*(cont_passos-1)+j+1)=X_E(round(gait/taxa)*(cont_passos-1)+j);
+                Z_E(round(gait/taxa)*(cont_passos-1)+j+1)=X_E(round(gait/taxa)*(cont_passos-1)+j);
+                X_D(round(gait/taxa)*(cont_passos-1)+j+1)=X(length(X));
+                Z_D(round(gait/taxa)*(cont_passos-1)+j+1)=Z(length(Z));
+            end
+            CMXg(j)=CMX_F;
+            CMYg(j)=CMY_F;
+        end
+    end
+%Q_aux=Q;
+%for i=1:length(Q_aux)
+    %Q(i+length(Q_aux),8:-1:1)=Q_aux(i,1:8);
+%end
+Q_aux=Q;
+tam=length(Q);
+for i=1:round(gait/taxa)
+    for j=1:8
+        Q(tam+i,j)=Q_aux(tam,j)-i*Q_aux(tam,j)/round(gait/taxa);
+    end
+end
+if 0 %Ativa espelhamento de passo
+    Q_aux=Q;
+    tam=length(Q);
+    for i=1:tam
+        for j=1:8
+            Q(tam+i,j)=Q_aux(i,9-j);
+        end
+    end
+end
+if graf
+    figure
+    plot(X_E,Z_E)
+    hold on
+    plot(X_D,Z_D) 
+    figure
+    for j=1:length(Q)
+        Q_TD(j)=Q(j,1);
+        Q_JD(j)=Q(j,2);
+        Q_QFD(j)=Q(j,3);
+        Q_QRD(j)=Q(j,4);
+        Q_QRE(j)=Q(j,5);
+        Q_QFE(j)=Q(j,6);
+        Q_JE(j)=Q(j,7);
+        Q_TE(j)=Q(j,8);
+        Q_TIME(j)=j*taxa;
+    end
+    plot(Q_TIME,Q_TD);
+    hold on
+    plot(Q_TIME,Q_JD);    
+    plot(Q_TIME,Q_QFD);
+    plot(Q_TIME,Q_QRD);
+    plot(Q_TIME,Q_QRE);
+    plot(Q_TIME,Q_QFE);
+    plot(Q_TIME,Q_JE);
+    plot(Q_TIME,Q_TE);
+    %grid on
+    %grid minor    
+    legend('Tonozelo D','Joelho D','Quadril flexao D','Quadril rot D','Quadril rot E','Quadril flexao E','Joelho E','Tornozelo E');
+    xlabel('Seconds');
+    ylabel('Degrees');
+    RPM(1,1:8)=0;
+    for i=2:length(Q)
+        for j=1:8
+            RPM(i,j)=(Q(i,j)-Q(i-1,j))*60/(taxa*360);
+            if RPM(i,j)>50
+                RPM(i,j)=50;
+            end
+            if RPM(i,j)<-50
+                RPM(i,j)=-50;
+            end
+            if RPM(i,j)<0
+                RPM(i,j)=-RPM(i,j);
+            end
+        end
+    end
+    figure
+    plot(RPM)
+    M=[0 0];
+    if 0 %Completo
+         for i=1:length(Q)
+            for j=1:8
+                M((i-1)*8+j,1)=Q(i,j);
+                M((i-1)*8+j,2)=RPM(i,j);
+                %fprintf("%f,%f\n",Q(i,j),RPM(i,j));
+            end
+        end
+    end
+    if 0 %inicio
+        for i=1:4*(length(Q)-1)/17
+            for j=1:8
+                M((i-1)*8+j,1)=Q(i,j);
+                M((i-1)*8+j,2)=RPM(i,j);
+                %fprintf("%f,%f\n",Q(i,j),RPM(i,j));
+            end
+        end
+    end
+    if 0%meio
+        for i=1:4*length(Q)/17
+            for j=1:8
+                M((i-1)*8+j,1)=Q(i+4*(length(Q)-1)/17,j);
+                M((i-1)*8+j,2)=RPM(i+4*(length(Q)-1)/17,j);
+                %fprintf("%f,%f\n",Q(i,j),RPM(i,j));
+            end
+        end
+    end
+    if 1 %fim
+        for i=1:4*length(Q)/17
+            for j=1:8
+                M((i-1)*8+j,1)=Q(i+13*(length(Q)-1)/17,j);
+                M((i-1)*8+j,2)=RPM(i+13*(length(Q)-1)/17,j);
+                %fprintf("%f,%f\n",Q(i,j),RPM(i,j));
+            end
+        end
+    end
+    if csv
+        %strcsv=strcat('V4_200Hz_','G',num2str(gait),'-X',num2str(axf),'-Z',num2str(azf),'-Tr',num2str(ang_tr)','-P12','-Pc0.1','-T-1','.csv');
+        %csvwrite(strcsv,M);
+        csvwrite('Fim G0.3 Ax 28.937 Az 39.815 Ang_r 12.299',M);
+    end    
+end
+j=length(Q); %ÚLTIMAS LINHAS DO CÓDIGO
+for i=0:j-1 
+    Time(i+1)=i*taxa;
+end 
