@@ -1,30 +1,24 @@
-alg_aprendizado = true;
-
-if alg_aprendizado
+if 1 %0 para rodar alg aprendizado
     clear all
     close all
     clc
-    espelhamento_de_passo = false;
     robosimulador_DataFile;
     Input_Simulink;
-    % n         n        n          gait    gait_c  ang_tr  ang_q   axf
-    % azf    taxa
     %0.68886	14.114	-0.018369	0.74002	1.7267	22.262	21.153	73.907	63.892	0.0029463
     %tres primeiros
     gait=0.74;
     gait_c=1.7267;
-    passos=2; %cada passo mexe um pe util pra virar
-    ang_tr=22.62;
-    ang_q=21.153;
-    axf=73;
-    azf=63;
+    passos=4;
+    ang_tr=16;
+    ang_q=19;
+    axf=80;
+    azf=80;
 end
-taxa = 0.0029463;
-%taxa=1/400; %Taxa de move
+%taxa=1/400; %Taxa de move 
 delta=0.0001;
-graf=1;
+graf=0;
 grafs=0;
-csv=1;
+csv=0;
 for cont_passos=1:passos
     for j=1:round(gait_c/taxa) 
         Qc(round(gait_c/taxa)*(cont_passos-1)+j+1,1)=-ang_q*sin(pi*taxa*j/gait_c)*(-1)^(1-mod(cont_passos,2));
@@ -263,7 +257,7 @@ for i=1:round(gait/taxa)
     end
 end
 end
-if espelhamento_de_passo %Ativa espelhamento de passo
+if  1 %Ativa espelhamento de passo
     Q_aux=Q;
     tam=length(Q);
     for i=1:tam
@@ -272,7 +266,7 @@ if espelhamento_de_passo %Ativa espelhamento de passo
         end
     end
 end
-if 0 %Ativa espelhamento de passo - por cima (pra virar)
+if 0 %Ativa espelhamento de passo - por cima
     Q_aux=Q;
     tam=length(Q);
     for i=1:tam

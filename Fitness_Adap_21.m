@@ -84,7 +84,7 @@ if 1 %ativando a proteço contra a mutação (garante que a mutaço é benéfica
         for cont_p=1:length(Pp)
             if F_V_A(cont_p)>F_V(cont_p) 
                 Pp(cont_p,1:5)=P_A(cont_p,1:5); 
-            end
+            end 
         end
     end 
 end
